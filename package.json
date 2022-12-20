@@ -1,7 +1,7 @@
 {
-	"name": "<name>",
-	"version": "<version>",
-	"description": "<desc>",
+	"name": "@formativesolutions/toolkit",
+	"version": "v0.1.0",
+	"description": "A toolkit of functions and functionality for building Formative websites.",
 	"type": "module",
 	"exports": {
 		".": "./js/main.js"
@@ -23,15 +23,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/<github_org>/<base_name>.git"
+		"url": "git+https://github.com/formativesolutions/toolkit.git"
 	},
 	"keywords": [],
-	"author": "Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/)",
+	"author": "Trevor Sears <trevor@formativesolutions.io> (https://formativesolutions.io/)",
 	"license": "GPL-3.0-or-later",
 	"bugs": {
-		"url": "https://github.com/<github_org>/<base_name>/issues"
+		"url": "https://github.com/formativesolutions/toolkit/issues"
 	},
-	"homepage": "https://github.com/<github_org>/<base_name>#readme",
+	"homepage": "https://github.com/formativesolutions/toolkit#readme",
 	"devDependencies": {
 		"@t99/eslint-config": "latest",
 		"@types/jest": "latest",

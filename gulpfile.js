@@ -1,9 +1,10 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
  * 8:48 PM -- June 16th, 2019.
- * Project: <name>
+ * Project: @formativesolutions/toolkit
  * 
- * <name> - <desc>
+ * @formativesolutions/toolkit - A toolkit of functions and functionality for
+ * building Formative websites.
  * Copyright (C) 2022 Trevor Sears
  * 
  * This program is free software: you can redistribute it and/or modify
