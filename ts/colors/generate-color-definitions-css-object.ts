@@ -1,6 +1,7 @@
 /*
- * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 9:20 AM -- December 20th, 2022.
+ * Created by Trevor Sears <trevor@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 9:44 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,5 +22,25 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./colors/main.js";
-export * from "./next/main.js";
+import { colorNameToCSSVar } from "./color-name-to-css-var.js";
+
+/**
+ * Creates an Emotion-style object/map from CSS variables names (generated with
+ * {@link colorNameToCSSVar}) to color values.
+ *
+ * @param {Record<string, string>} map An object mapping from color names to
+ * valid CSS color values.
+ * @returns {Record<string, string>} A new object mapping from valid CSS
+ * variable identifiers to CSS color values.
+ */
+export function generateColorDefinitionsCSSObject(
+	map: Record<string, string>): Record<string, string> {
+	
+	return Object.fromEntries(
+		Object.entries(map).map(
+			([colorName, colorValue]: [string, string]): [string, string] =>
+				[colorNameToCSSVar(colorName, false), colorValue]
+		)
+	);
+	
+}

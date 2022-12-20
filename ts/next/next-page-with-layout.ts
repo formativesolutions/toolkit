@@ -1,6 +1,7 @@
 /*
- * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 9:20 AM -- December 20th, 2022.
+ * Created by Trevor Sears <trevor@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 9:49 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,5 +22,14 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./colors/main.js";
-export * from "./next/main.js";
+import { NextPage } from "next";
+import { GetLayoutFunction } from "./get-layout-function";
+
+/**
+ * The form of a Next page which specifies its own custom layout.
+ */
+export type NextPageWithLayout = NextPage & {
+	
+	getLayout?: GetLayoutFunction,
+	
+};

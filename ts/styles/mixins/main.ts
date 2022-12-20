@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 9:20 AM -- December 20th, 2022.
+ * 10:01 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,5 +21,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./colors/main.js";
-export * from "./next/main.js";
+export {
+	FlexAlignmentOption,
+	flexContainer,
+	FlexContainerConfiguration
+} from "./flex-container.js";

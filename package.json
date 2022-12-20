@@ -4,11 +4,14 @@
 	"description": "A toolkit of functions and functionality for building Formative websites.",
 	"type": "module",
 	"exports": {
-		".": "./js/main.js"
+		".": "./js/main.js",
+		"colors": "/js/colors/main.js"
 	},
 	"typesVersions": {
 		"*": {
-			">=4.0": ["./.d.ts/main.d.ts"]
+			">=4.0": [
+				"./.d.ts/main.d.ts"
+			]
 		}
 	},
 	"engines": {
@@ -32,18 +35,28 @@
 		"url": "https://github.com/formativesolutions/toolkit/issues"
 	},
 	"homepage": "https://github.com/formativesolutions/toolkit#readme",
+	"dependencies": {
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"@svgr/webpack": "^6.5.1",
+		"next": "^13.0.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
 	"devDependencies": {
-		"@t99/eslint-config": "latest",
-		"@types/jest": "latest",
-		"@types/node": "latest",
-		"del": "latest",
-		"gulp": "latest",
-		"gulp-sourcemaps": "latest",
-		"gulp-typescript": "latest",
-		"gulp-terser": "latest",
-		"jest": "latest",
-		"ts-jest": "latest",
-		"typescript": "latest",
-		"ts-node": "latest"
+		"@t99/eslint-config": "^1.3.0",
+		"@types/jest": "^29.2.4",
+		"@types/node": "^18.11.17",
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.9",
+		"del": "^7.0.0",
+		"gulp": "^4.0.2",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-terser": "^2.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"jest": "^29.3.1",
+		"ts-jest": "^29.0.3",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.4"
 	}
 }

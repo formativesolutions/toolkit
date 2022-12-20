@@ -1,6 +1,7 @@
 /*
- * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 9:20 AM -- December 20th, 2022.
+ * Created by Trevor Sears <trevor@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 9:53 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,5 +22,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./colors/main.js";
-export * from "./next/main.js";
+export { GetLayoutFunction } from "./get-layout-function.js";
+export { NextAppPropsWithLayout } from "./next-app-props-with-layout.js";
+export { NextPageWithLayout } from "./next-page-with-layout.js";
