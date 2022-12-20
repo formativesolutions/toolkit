@@ -12,7 +12,7 @@
 		"esModuleInterop": true,
 		
 		// Compiles to ES6 JS.
-		"target": "es6",
+		"target": "ES2019",
 		
 		// Generates a JS --> TS source map for easier debugging.
 		"sourceMap": true,
