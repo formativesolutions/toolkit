@@ -64,6 +64,9 @@
 		// Alow JSX-style tags within code.
 		"jsx": "preserve",
 		
+		// Use Emotion as a source for JSX related types.
+		"jsxImportSource": "@emotion/react",
+		
 		// Allow React's form of default imports.
 		"allowSyntheticDefaultImports": true
 		
