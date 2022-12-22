@@ -64,6 +64,8 @@
 		// Allow JSX-style tags within code.
 		"jsx": "react-jsx",
 		
+		"jsxImportSource": "@emotion/react",
+		
 		// Allow React's form of default imports.
 		"allowSyntheticDefaultImports": true
 		

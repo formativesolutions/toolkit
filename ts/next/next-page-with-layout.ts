@@ -23,7 +23,7 @@
  */
 
 import { NextPage } from "next";
-import { GetLayoutFunction } from "./get-layout-function";
+import { GetLayoutFunction } from "./get-layout-function.js";
 
 /**
  * The form of a Next page which specifies its own custom layout.

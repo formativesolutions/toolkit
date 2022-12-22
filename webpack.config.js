@@ -6,9 +6,15 @@ const config = {
 	
 	mode: "development",
 	
-	entry: "./ts/main.ts",
+	entry: "./ts/main.js",
 	
 	devtool: "source-map",
+	
+	stats: {
+		
+		errorDetails: true,
+		
+	},
 	
 	experiments: {
 		
@@ -28,7 +34,7 @@ const config = {
 			
 			type: "module",
 			
-		}
+		},
 		
 	},
 	
@@ -66,13 +72,22 @@ const config = {
 	
 	resolve: {
 		
+		// enforceExtension: true,
+		
 		extensions: [
 			
 			".tsx",
 			".ts",
 			".js",
 			
+			
 		],
+		
+		extensionAlias: {
+
+			".js": [".ts", ".tsx", ".js"],
+
+		}
 		
 	},
 	

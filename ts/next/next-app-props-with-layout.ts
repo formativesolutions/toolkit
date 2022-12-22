@@ -23,7 +23,7 @@
  */
 
 import { AppProps as NextAppProps } from "next/app";
-import { NextPageWithLayout } from "./next-page-with-layout";
+import { NextPageWithLayout } from "./next-page-with-layout.js";
 
 /**
  * The form of the Next app props that are passed (specialized, such that

@@ -21,7 +21,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./colors/main";
-export * from "./components/main";
-export * from "./next/main";
-export * from "./styles/main";
+export * from "./colors/main.js";
+export * from "./components/main.js";
+export * from "./next/main.js";
+export * from "./styles/main.js";

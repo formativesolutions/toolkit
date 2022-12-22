@@ -22,6 +22,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./get-layout-function";
-export * from "./next-app-props-with-layout";
-export * from "./next-page-with-layout";
+export * from "./get-layout-function.js";
+export * from "./next-app-props-with-layout.js";
+export * from "./next-page-with-layout.js";

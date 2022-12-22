@@ -22,7 +22,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { colorNameToCSSVar } from "./color-name-to-css-var";
+import { colorNameToCSSVar } from "./color-name-to-css-var.js";
 
 /**
  * Creates an Emotion-style object/map from CSS variables names (generated with
