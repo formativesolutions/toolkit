@@ -62,10 +62,7 @@
 		"strictFunctionTypes": true,
 		
 		// Allow JSX-style tags within code.
-		"jsx": "preserve",
-		
-		// Use Emotion as a source for JSX related types.
-		"jsxImportSource": "@emotion/react",
+		"jsx": "react-jsx",
 		
 		// Allow React's form of default imports.
 		"allowSyntheticDefaultImports": true

@@ -36,7 +36,7 @@ export type Props<T> = {
 	columns: ColumnDefinition<T>[],
 };
 
-export default function Table<T>({ columns, data }: Props<T>): ReactElement {
+export function Table<T>({ columns, data }: Props<T>): ReactElement {
 	
 	return (
 		<div>

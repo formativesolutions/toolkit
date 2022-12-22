@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 10:07 AM -- December 20th, 2022.
+ * 7:55 AM -- December 22nd, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,44 +21,5 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-
-const containerStyles: SerializedStyles = css({
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "center",
-	alignItems: "center",
-	boxShadow: "inset 0 10px 5px -5px #0006",
-	padding: "15px",
-	lineHeight: 1,
-	backgroundColor: "#3D4886",
-	color: "white",
-});
-
-const textStyles: SerializedStyles = css({
-	display: "inline",
-	fontSize: "0.75rem",
-	fontWeight: "bold",
-	textAlign: "center",
-	lineHeight: 1.3,
-});
-
-const linkStyles: SerializedStyles = css({
-	all: "inherit",
-});
-
-export function FormativeSolutionsSubfooter(): ReactElement {
-	
-	return (
-		<div css={containerStyles}>
-			<p css={textStyles}>
-				This site proudly powered and supported by the team at{" "}
-				<a css={linkStyles}
-				   href="https://formativesolutions.io/">Formative Solutions</a>
-				.
-			</p>
-		</div>
-	);
-	
-}
+export * from "./formative-solutions-subfooter";
+export * from "./table";

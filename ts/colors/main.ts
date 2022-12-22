@@ -22,7 +22,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export { ColorMap } from "./color-map";
-export { colorNameToCSSVar } from "./color-name-to-css-var.js";
-export { createColorToCSSVariableNameMap } from "./create-color-to-css-variable-name-map.js"
-export { generateColorDefinitionsCSSObject } from "./generate-color-definitions-css-object.js"
+export * from "./color-map";
+export * from "./color-name-to-css-var";
+export * from "./create-color-to-css-variable-name-map"
+export * from "./generate-color-definitions-css-object"

@@ -21,8 +21,4 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export {
-	FlexAlignmentOption,
-	flexContainer,
-	FlexContainerConfiguration
-} from "./flex-container.js";
+export * from "./flex-container";
