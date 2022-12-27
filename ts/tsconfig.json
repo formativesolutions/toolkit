@@ -20,6 +20,9 @@
 		// Prevents the compiler from compiling down .ts files that contain errors.
 		"noEmitOnError": true,
 		
+		// Removes comments from compiled .js files.
+		"removeComments": false,
+		
 		// Generate type/declaration files.
 		"declaration": true,
 		
@@ -44,9 +47,6 @@
 		// Prevents switch statements that do not handle every use-case.
 		"noFallthroughCasesInSwitch": true,
 		
-		// Removes comments from compiled .js files.
-		"removeComments": false,
-		
 		// Prevents implied 'any' type (undeclared expression types).
 		"noImplicitAny": true,
 		
@@ -61,9 +61,10 @@
 		// actually fulfill the requirements of the designated parameter types.
 		"strictFunctionTypes": true,
 		
-		// Allow JSX-style tags within code.
+		// Preserve the format of JSX/TSX in outputted files.
 		"jsx": "react-jsx",
 		
+		// Use @emotion/react to set the JSX pragma.
 		"jsxImportSource": "@emotion/react",
 		
 		// Allow React's form of default imports.
