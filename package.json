@@ -21,7 +21,8 @@
 	"scripts": {
 		"build": "webpack",
 		"test": "npm run build && jest",
-		"prepack": "npm run build"
+		"delpack": "rm -f $(echo \"$(echo ${npm_package_name} | sed -E 's/@(.+)\\/(.+)/\\1-\\2/')-${npm_package_version}.tgz\")",
+		"prepack": "npm run delpack && npm run build"
 	},
 	"repository": {
 		"type": "git",
