@@ -5,6 +5,7 @@
 .d.ts/tests/
 js/tests/
 ts/tests/
+jest.config.ts
 
 # Ignore TypeScript files.
 ts/
@@ -22,8 +23,3 @@ webpack.config.js
 # Ignore documentation files.
 docs/
 mkdocs.yml
-
-# Ignore misc. files.
-.npmignore
-gulpfile.js
-jest.config.ts
