@@ -9,6 +9,11 @@ ts/tests/
 # Ignore TypeScript files.
 ts/
 
+# Ignore build-related files
+.swc/
+.swcrc
+webpack.config.js
+
 # Ignore Git/GitHub files.
 .github/
 .gitattributes

@@ -7,6 +7,9 @@
 # Ignore JavaScript files built from TypeScript.
 js/
 
+# Ignore SWC build-related files.
+.swc/
+
 # Ignore NPM `node_modules` package directory/files.
 node_modules/
 
