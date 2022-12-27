@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 10:07 AM -- December 20th, 2022.
+ * 11:02 AM -- December 27th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,21 +21,33 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import styles from "./formative-solutions-subfooter.module.scss";
-import { ReactElement } from "react";
-
-const SITE_LINK: string = "https://formativesolutions.io/";
-
-export function FormativeSolutionsSubfooter(): ReactElement {
+.subfooter__container {
 	
-	return (
-		<div className={styles.subfooter__container}>
-			<p className={styles.subfooter__text}>
-				This site proudly powered and supported by the team
-				at{" "}<a className={styles.subfooter__link}
-						  href={SITE_LINK}>Formative Solutions</a>.
-			</p>
-		</div>
-	);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0 10px 5px -5px #0006;
+	padding: 15px;
+	line-height: 1;
+	background-color: #3D4886;
+	color: white;
+	
+}
+
+.subfooter__text {
+	
+	display: inline;
+	font-size: 0.75rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.3;
+	
+}
+
+.subfooter__link {
+	
+	all: inherit;
 	
 }

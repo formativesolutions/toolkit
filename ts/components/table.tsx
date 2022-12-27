@@ -22,7 +22,6 @@
  */
 
 import { ReactElement } from "react";
-// import { css, SerializedStyles } from "@emotion/react";
 
 export type ColumnDefinition<T> = {
 	header: string,
