@@ -3,16 +3,16 @@
 	"compilerOptions": {
 		
 		// Specify module code generation for CommonJS.
-		"module": "ES2020",
+		"module": "ES2022",
 		
 		// Uses Node-style module resolution.
-		"moduleResolution": "node",
+		"moduleResolution": "Node16",
 		
 		// Allows interoperability between CommonJS and ES export/imports.
 		"esModuleInterop": true,
 		
 		// Compiles to ES6 JS.
-		"target": "ES2019",
+		"target": "ES2022",
 		
 		// Generates a JS --> TS source map for easier debugging.
 		"sourceMap": true,

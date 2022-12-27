@@ -22,7 +22,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { AppProps as NextAppProps } from "next/app";
+import { AppProps as NextAppProps } from "next/app.js";
 import { NextPageWithLayout } from "./next-page-with-layout.js";
 
 /**
