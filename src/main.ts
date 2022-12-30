@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 10:01 AM -- December 20th, 2022.
+ * 9:20 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -21,4 +21,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./mixins/main.js";
+export * from "./colors/main.js";
+export * from "./components/main.js";
+export * from "./next/main.js";
