@@ -1,6 +1,14 @@
-ts/tests/coverage/* linguist-vendored
+.github/* linguist-vendored
+.swc/* linguist-vendored
+dist/* linguist-vendored
+node_modules/* linguist-vendored
+src/tests/coverage/* linguist-vendored
 .eslintrc.js linguist-vendored
-gulpfile.js linguist-vendored
+.gitattributes linguist-vendored
+.gitignore linguist-vendored
+.npmignore linguist-vendored
 jest.config.ts linguist-vendored
+license.md linguist-vendored
 package.json linguist-vendored
 package-lock.json linguist-vendored
+readme.md linguist-vendored

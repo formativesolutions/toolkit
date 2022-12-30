@@ -27,10 +27,10 @@
 		"declaration": true,
 		
 		// Compiles to the directory above this one just to keep everything better organized.
-		"outDir": "../js/",
+		"outDir": "./dist",
 		
 		// Compiles .d.ts declaration files to a directory called '.d.ts' above this directory.
-		"declarationDir": "../.d.ts/",
+		"declarationDir": "./dist/.d.ts",
 		
 		// Forces consistent letter casing when referencing the same file.
 		"forceConsistentCasingInFileNames": true,
@@ -64,9 +64,6 @@
 		// Preserve the format of JSX/TSX in outputted files.
 		"jsx": "react-jsx",
 		
-		// Use @emotion/react to set the JSX pragma.
-		"jsxImportSource": "@emotion/react",
-		
 		// Allow React's form of default imports.
 		"allowSyntheticDefaultImports": true
 		
@@ -78,10 +75,16 @@
 		
 	},
 	
+	"include": [
+		
+		"./src/**/*"
+		
+	],
+	
 	"exclude": [
 		
-		"../node_modules"
-	
+		"./node_modules"
+		
 	]
 	
 }

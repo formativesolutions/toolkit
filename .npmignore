@@ -2,18 +2,18 @@
 .idea/
 
 # Ignore test files.
-.d.ts/tests/
-js/tests/
-ts/tests/
+dist/.d.ts/tests/
+dist/tests/
 jest.config.ts
 
-# Ignore TypeScript files.
-ts/
+# Ignore all pre-compilation/source files.
+src/
 
 # Ignore build-related files
 .swc/
-.swcrc
-webpack.config.js
+.eslintrc.js
+build.config.js
+gulpfile.js
 
 # Ignore Git/GitHub files.
 .github/

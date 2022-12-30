@@ -4,25 +4,32 @@
 	"description": "A toolkit of functions and functionality for building Formative websites.",
 	"type": "module",
 	"exports": {
-		".": "./js/main.js"
+		".": "./dist/main.js"
 	},
 	"typesVersions": {
 		"*": {
 			">=4.0": [
-				"./.d.ts/main.d.ts"
+				"./dist/.d.ts/main.d.ts"
 			]
 		}
 	},
 	"engines": {
 		"node": ">=14.16"
 	},
-	"main": "./js/main.js",
-	"types": ".d.ts/main",
+	"main": "./dist/main.js",
+	"types": "./dist/.d.ts/main.d.ts",
+	"files": [
+		"dist/",
+		"license.md",
+		"package.json",
+		"readme.md"
+	],
 	"scripts": {
 		"build": "webpack",
+		"buildtypes": "tsc -p tsconfig.json --emitDeclarationOnly",
 		"test": "npm run build && jest",
 		"delpack": "rm -f $(echo \"$(echo ${npm_package_name} | sed -E 's/@(.+)\\/(.+)/\\1-\\2/')-${npm_package_version}.tgz\")",
-		"prepack": "npm run delpack && npm run build"
+		"prepack": "npm run delpack && npm run buildtypes && npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -36,8 +43,6 @@
 	},
 	"homepage": "https://github.com/formativesolutions/toolkit#readme",
 	"dependencies": {
-		"@emotion/react": "^11.10.5",
-		"@emotion/styled": "^11.10.5",
 		"@svgr/webpack": "^6.5.1",
 		"next": "^13.0.7",
 		"react": "^18.2.0",
@@ -51,8 +56,11 @@
 		"@types/node": "^18.11.17",
 		"@types/react": "^18.0.26",
 		"@types/react-dom": "^18.0.9",
-		"@types/webpack": "^5.28.0",
 		"css-loader": "^6.7.3",
+		"del": "^7.0.0",
+		"gulp": "^4.0.2",
+		"gulp-swc": "^1.2.3",
+		"gulp-typescript": "^6.0.0-alpha.1",
 		"jest": "^29.3.1",
 		"mini-css-extract-plugin": "^2.7.2",
 		"sass": "^1.57.1",
@@ -64,6 +72,7 @@
 		"typescript": "^4.9.4",
 		"webpack": "^5.75.0",
 		"webpack-cli": "^5.0.1",
-		"webpack-node-externals": "^3.0.0"
+		"webpack-node-externals": "^3.0.0",
+		"webpack-stream": "^7.0.0"
 	}
 }

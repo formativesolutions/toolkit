@@ -12,12 +12,12 @@ const jestConfig: JestConfigWithTsJest = {
 	collectCoverage: true,
 	
 	// The directory where Jest should output its coverage files
-	coverageDirectory: "ts/tests/coverage",
+	coverageDirectory: "src/tests/coverage",
 	
 	// A list of paths to directories that Jest should use to search for files in
 	roots: [
 		
-		"<rootDir>/ts/tests",
+		"<rootDir>/src/tests",
 		
 	],
 	
