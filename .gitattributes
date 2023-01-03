@@ -3,7 +3,7 @@
 dist/* linguist-vendored
 node_modules/* linguist-vendored
 src/tests/coverage/* linguist-vendored
-.eslintrc.js linguist-vendored
+.eslintrc.cjs linguist-vendored
 .gitattributes linguist-vendored
 .gitignore linguist-vendored
 .npmignore linguist-vendored

@@ -11,7 +11,7 @@ src/
 
 # Ignore build-related files
 .swc/
-.eslintrc.js
+.eslintrc.cjs
 build.config.js
 gulpfile.js
 
