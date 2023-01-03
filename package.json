@@ -25,6 +25,7 @@
 		"readme.md"
 	],
 	"scripts": {
+		"lint": "eslint src./**",
 		"build": "webpack",
 		"buildtypes": "tsc -p tsconfig.json --emitDeclarationOnly",
 		"test": "npm run build && jest",
