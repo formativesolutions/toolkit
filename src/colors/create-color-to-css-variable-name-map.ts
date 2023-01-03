@@ -22,7 +22,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { ColorMap } from "./color-map.js";
+import type { ColorMap } from "./color-map.js";
 import { colorNameToCSSVar } from "./color-name-to-css-var.js";
 
 /**

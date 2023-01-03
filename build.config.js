@@ -17,7 +17,7 @@ import MiniCSSExtractPlugin from "mini-css-extract-plugin";
  * @param {boolean} isProduction If set to true, the returned config will be for
  * production builds, otherwise the returned config will be for development
  * builds. Defaults to true.
- * @returns {BuildConfig} The build config object for the specified environment
+ * @returns {object} The build config object for the specified environment
  * (defaults to production). 
  */
 export function getBuildConfig(isProduction = true) {
@@ -64,10 +64,10 @@ const BASE_WEBPACK_CONFIG = {
 	module: {
 		rules: [
 			{
-				test: /\.s?css$/,
+				test: /\.s?css$/u,
 				oneOf: [
 					{
-						test: /\.module\.s?css$/,
+						test: /\.module\.s?css$/u,
 						use: [
 							MiniCSSExtractPlugin.loader,
 							{
@@ -113,7 +113,7 @@ const BASE_WEBPACK_CONFIG = {
  * @param {boolean} isProduction If set to true, the returned config will be for
  * production builds, otherwise the returned config will be for development
  * builds. Defaults to true.
- * @returns {WebpackConfiguration} The Webpack config object for the specified
+ * @returns {object} The Webpack config object for the specified
  * environment (defaults to production).
  */
 export function getWebpackConfig(isProduction = true) {
@@ -133,15 +133,15 @@ export function getWebpackConfig(isProduction = true) {
 			...BASE_WEBPACK_CONFIG?.module ?? {},
 			rules: [
 				{
-					test: /\.tsx?$/,
-					exclude: /node_modules/,
+					test: /\.tsx?$/u,
+					exclude: /node_modules/u,
 					use: {
 						loader: "swc-loader",
 						options: getSWCConfig(isProduction),
 					},
 				},
 				...BASE_WEBPACK_CONFIG?.module?.rules ?? [],
-			]
+			],
 		},
 		resolve: {
 			...BASE_WEBPACK_CONFIG?.resolve ?? {},
@@ -149,7 +149,7 @@ export function getWebpackConfig(isProduction = true) {
 			extensionAlias: {
 				".js": buildConfig.extensionsToResolve,
 			},
-		}
+		},
 	};
 	
 	if (isProduction) {
@@ -209,7 +209,7 @@ const BASE_SWC_CONFIG = {
  * @param {boolean} isProduction If set to true, the returned config will be for
  * production builds, otherwise the returned config will be for development
  * builds. Defaults to true.
- * @returns {SWCConfig} The SWC config object for the specified environment
+ * @returns {object} The SWC config object for the specified environment
  * (defaults to production).
  */
 export function getSWCConfig(isProduction = true) {

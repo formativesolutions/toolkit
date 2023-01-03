@@ -24,5 +24,5 @@
 
 export * from "./color-map.js";
 export * from "./color-name-to-css-var.js";
-export * from "./create-color-to-css-variable-name-map.js"
-export * from "./generate-color-definitions-css-object.js"
+export * from "./create-color-to-css-variable-name-map.js";
+export * from "./generate-color-definitions-css-object.js";

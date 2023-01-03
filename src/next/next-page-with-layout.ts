@@ -22,14 +22,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { NextPage } from "next";
-import { GetLayoutFunction } from "./get-layout-function.js";
+import type { NextPage } from "next";
+import type { GetLayoutFunction } from "./get-layout-function.js";
 
 /**
  * The form of a Next page which specifies its own custom layout.
  */
 export type NextPageWithLayout = NextPage & {
-	
-	getLayout?: GetLayoutFunction,
-	
+	getLayout?: GetLayoutFunction;
 };

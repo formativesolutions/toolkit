@@ -21,18 +21,18 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export type ColumnDefinition<T> = {
-	header: string,
-	tooltip?: string,
-	getColumnValue: (data: T, rowIndex: number, columnIndex: number) => string,
-	compareFunction?: (a: URL, b: URL) => number,
+	header: string;
+	tooltip?: string;
+	getColumnValue(data: T, rowIndex: number, columnIndex: number): string;
+	compareFunction?(a: URL, b: URL): number;
 };
 
 export type Props<T> = {
-	data: T[],
-	columns: ColumnDefinition<T>[],
+	data: T[];
+	columns: Array<ColumnDefinition<T>>;
 };
 
 export function Table<T>({ columns, data }: Props<T>): ReactElement {

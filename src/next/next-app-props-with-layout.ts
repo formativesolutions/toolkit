@@ -22,15 +22,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { AppProps as NextAppProps } from "next/app.js";
-import { NextPageWithLayout } from "./next-page-with-layout.js";
+import type { AppProps as NextAppProps } from "next/app.js";
+import type { NextPageWithLayout } from "./next-page-with-layout.js";
 
 /**
  * The form of the Next app props that are passed (specialized, such that
  * Next pages can specify their own custom layouts, if need-be).
  */
 export type NextAppPropsWithLayout = NextAppProps & {
-	
-	Component: NextPageWithLayout,
-	
+	Component: NextPageWithLayout;
 };
