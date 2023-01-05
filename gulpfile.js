@@ -13,7 +13,6 @@ import typescript from "gulp-typescript";
 import { getBuildConfig, getWebpackConfig } from "./build.config.js";
 
 const IS_PRODUCTION = true;
-
 const buildConfig = getBuildConfig(IS_PRODUCTION);
 
 function clean() {
@@ -124,17 +123,11 @@ function defaultTask(done) {
 	
 }
 
-const TASKS = {
+Object.entries({
 	"default": defaultTask,
 	prepack,
 	clean,
 	cleanPack,
 	build,
 	rebuild,
-};
-
-for (const [taskName, taskFunction] of Object.entries(TASKS)) {
-	
-	gulp.task(taskName, taskFunction);
-	
-}
+}).forEach((task) => gulp.task(...task));
