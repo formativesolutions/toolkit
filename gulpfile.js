@@ -4,6 +4,8 @@
  * Project: toolkit
  */
 
+import fs from "node:fs/promises";
+import path from "node:path";
 import gulp from "gulp";
 import { deleteAsync } from "del";
 import webpack from "webpack";
@@ -21,6 +23,41 @@ function clean() {
 		buildConfig.outputDirectory,
 	]);
 	
+}
+
+async function cleanPack(done) {
+
+	const packageJSONFilePath = path.resolve(
+		buildConfig.projectRoot,
+		"package.json",
+	);
+	
+	const rawPackageJSON = await fs.readFile(packageJSONFilePath, {
+		encoding: "utf8",
+	});
+	
+	const packageJSON = JSON.parse(rawPackageJSON);
+	
+	const packageName = packageJSON.name;
+	const packageVersion = packageJSON.version;
+	
+	let packFileName = "";
+	
+	if (packageName.startsWith("@")) {
+		
+		const [
+			organizationName,
+			basePackageName,
+		] = packageName.substring(1).split("/");
+		
+		packFileName += `${organizationName}-${basePackageName}`;
+		
+	} else packFileName += packageName;
+	
+	packFileName += `-${packageVersion}.tgz`;
+	
+	return deleteAsync(path.resolve(buildConfig.projectRoot, packFileName));
+
 }
 
 function buildTypes() {
@@ -72,6 +109,15 @@ function rebuild(done) {
 	
 }
 
+function prepack(done) {
+	
+	return gulp.parallel(
+		cleanPack,
+		rebuild,
+	)(done);
+	
+}
+
 function defaultTask(done) {
 	
 	return rebuild(done);
@@ -80,7 +126,9 @@ function defaultTask(done) {
 
 const TASKS = {
 	"default": defaultTask,
+	prepack,
 	clean,
+	cleanPack,
 	build,
 	rebuild,
 };
