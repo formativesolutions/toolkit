@@ -26,11 +26,9 @@
 	],
 	"scripts": {
 		"lint": "eslint src./**",
-		"build": "webpack",
-		"buildtypes": "tsc -p tsconfig.json --emitDeclarationOnly",
+		"build": "gulp",
 		"test": "npm run build && jest",
-		"delpack": "rm -f $(echo \"$(echo ${npm_package_name} | sed -E 's/@(.+)\\/(.+)/\\1-\\2/')-${npm_package_version}.tgz\")",
-		"prepack": "npm run delpack && npm run buildtypes && npm run build"
+		"prepack": "gulp prepack"
 	},
 	"repository": {
 		"type": "git",
