@@ -1,6 +1,6 @@
 {
 	"name": "@formativesolutions/toolkit",
-	"version": "v0.1.0",
+	"version": "v0.1.1",
 	"description": "A toolkit of functions and functionality for building Formative websites.",
 	"type": "module",
 	"exports": {
