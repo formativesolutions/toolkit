@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 9:48 AM -- December 20th, 2022.
+ * 5:31 PM -- January 8th, 2023
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,12 +22,20 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type { ReactElement, ReactNode } from "react";
+import type { ReactElement } from "react";
 
 /**
- * The form of the function that is expected on Next pages that provide their
- * own custom layout.
- * @deprecated In favor of the NextJS 13's `app/` directory layout files.
+ * The type of the single parameter of the default function exported from layout
+ * files in NextJS's `app/` directory.
+ * 
+ * Contains a 'children' field, which represents the content unique to a given
+ * page that is using this layout.
+ * Also contains a 'params' field which represents the path parameters that Next
+ * has extracted from the current route.
+ * 
  * @see NextLayoutFunction
  */
-export type GetLayoutFunction = (page: ReactElement) => ReactNode;
+export type NextLayoutProps<T extends string = never> = {
+	children: ReactElement;
+	params: Record<T, string>;
+};
