@@ -29,7 +29,9 @@ export function getBuildConfig(isProduction = true) {
 	const projectRoot = dirname;
 	const sourceDirectory = path.resolve(projectRoot, "src");
 	const outputDirectory = path.resolve(projectRoot, "dist");
+	const sassOutputDirectory = path.resolve(outputDirectory, "sass");
 	const typesOutputDirectory = path.resolve(outputDirectory, ".d.ts");
+	const sassInputDirectory = path.resolve(sourceDirectory, "sass");
 	const entryFile = path.resolve(sourceDirectory, "main.ts");
 	const bundleFile = path.resolve(outputDirectory, "main.js");
 	const tsconfigFile = path.resolve(projectRoot, "tsconfig.json");
@@ -39,7 +41,9 @@ export function getBuildConfig(isProduction = true) {
 		projectRoot,
 		sourceDirectory,
 		outputDirectory,
+		sassOutputDirectory,
 		typesOutputDirectory,
+		sassInputDirectory,
 		entryFile,
 		bundleFile,
 		tsconfigFile,

@@ -73,6 +73,13 @@ function buildTypes() {
 	
 }
 
+function copySass() {
+	
+	return gulp.src(`${buildConfig.sassInputDirectory}/**/*`)
+		.pipe(gulp.dest(buildConfig.sassOutputDirectory));
+	
+}
+
 function compile() {
 	
 	const webpackConfig = getWebpackConfig(IS_PRODUCTION);
@@ -98,7 +105,11 @@ function compile() {
 
 function build(done) {
 	
-	return gulp.parallel(buildTypes, compile)(done);
+	return gulp.parallel(
+		buildTypes,
+		copySass,
+		compile,
+	)(done);
 	
 }
 
