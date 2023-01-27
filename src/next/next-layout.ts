@@ -31,5 +31,5 @@ import type { NextLayoutProps } from "./next-layout-props.js";
  *
  * @see NextLayoutProps
  */
-export type NextLayoutFunction<T extends string = never> =
+export type NextLayout<T extends string = never> =
 	(props: NextLayoutProps<T>) => ReactNode | Promise<ReactNode>;

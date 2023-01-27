@@ -24,6 +24,6 @@
 
 export * from "./get-layout-function.js";
 export * from "./next-app-props-with-layout.js";
-export * from "./next-layout-function.js";
+export * from "./next-layout.js";
 export * from "./next-layout-props.js";
 export * from "./next-page-with-layout.js";

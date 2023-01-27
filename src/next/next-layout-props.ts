@@ -33,7 +33,7 @@ import type { ReactNode } from "react";
  * Also contains a 'params' field which represents the path parameters that Next
  * has extracted from the current route.
  *
- * @see NextLayoutFunction
+ * @see NextLayout
  */
 export type NextLayoutProps<T extends string = never> = {
 	children: ReactNode;
