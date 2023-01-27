@@ -27,7 +27,10 @@ import type { ReactElement, ReactNode } from "react";
 /**
  * The form of the function that is expected on Next pages that provide their
  * own custom layout.
+ *
+ * @see NextLayoutFunction The type that should be used for layout files found
+ * in NextJS 13's `/app` directory, which serves as an indirect replacement for
+ * this type.
  * @deprecated In favor of the NextJS 13's `app/` directory layout files.
- * @see NextLayout
  */
 export type GetLayoutFunction = (page: ReactElement) => ReactNode;

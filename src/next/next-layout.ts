@@ -29,7 +29,8 @@ import type { NextLayoutProps } from "./next-layout-props.js";
  * The type of the default exported function from layout files in NextJS's
  * `app/` directory.
  *
- * @see NextLayoutProps
+ * @see NextLayoutProps The type of the object passed as a parameter to this
+ * function.
  */
 export type NextLayout<T extends string = never> =
 	(props: NextLayoutProps<T>) => ReactNode | Promise<ReactNode>;

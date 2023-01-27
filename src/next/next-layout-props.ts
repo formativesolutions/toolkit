@@ -28,14 +28,20 @@ import type { ReactNode } from "react";
  * The type of the single parameter of the default function exported from layout
  * files in NextJS's `app/` directory.
  *
- * Contains a 'children' field, which represents the content unique to a given
- * page that is using this layout.
- * Also contains a 'params' field which represents the path parameters that Next
- * has extracted from the current route.
- *
- * @see NextLayout
+ * @see NextLayout The type of the function that takes objects of this type as a
+ * parameter.
  */
 export type NextLayoutProps<T extends string = never> = {
+	
+	/**
+	 * Represents the content unique to a given page that is using this layout.
+	 */
 	children: ReactNode;
+	
+	/**
+	 * Represents the path parameters that Next has extracted from the current
+	 * route.
+	 */
 	params: Record<T, string>;
+	
 };
