@@ -26,21 +26,28 @@
  * The type of the single parameter of the default function exported from page
  * files in NextJS's `app/` directory.
  * 
- * @see NextPage The type of the function that takes objects of this type as a
- * parameter.
+ * @param {string} P A union of the strings that comprise the possible path
+ * parameters for the page in question.
+ * @param {string} S A union of the strings that comprise the possible query
+ * parameters for the page in question.
+ * @see {@link NextPage} The type of the function that takes objects of this
+ * type as a parameter.
  */
-export type NextPageProps = {
+export type NextPageProps<
+	P extends string = string,
+	S extends string = string,
+> = {
 	
 	/**
 	 * An object whose key-value pairs represent any path parameters present in
 	 * the URL used to navigate to the current page.
 	 */
-	params: Record<string, string>;
+	params: Record<P, string>;
 	
 	/**
 	 * An object whose key-value pairs represent any query parameters present in
 	 * the URL used to navigate to the current page.
 	 */
-	searchParams?: Record<string, string>;
+	searchParams?: Record<S, string>;
 	
 };
