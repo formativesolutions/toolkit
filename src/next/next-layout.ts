@@ -33,8 +33,8 @@ import type { NextLayoutProps } from "./next-layout-props.js";
  * parameters to pages using the layout in question. Note that only path
  * parameters earlier in the routing chain than the given layout will be
  * available for use.
- * @see NextLayoutProps The type of the object passed as a parameter to this
- * function.
+ * @see {@link NextLayoutProps} The type of the object passed as a parameter to
+ * this function.
  */
 export type NextLayout<P extends string = string> =
 	(props: NextLayoutProps<P>) => ReactNode | Promise<ReactNode>;

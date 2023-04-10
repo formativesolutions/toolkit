@@ -29,7 +29,7 @@ import type { NextPageWithLayout } from "./next-page-with-layout.js";
  * The form of the Next app props that are passed (specialized, such that
  * Next pages can specify their own custom layouts, if need-be).
  * 
- * @see NextAppProps The base type for this type.
+ * @see {@link NextAppProps} The base type for this type.
  * @deprecated In favor of apps using the new `/app` directory.
  */
 export type NextAppPropsWithLayout = NextAppProps & {

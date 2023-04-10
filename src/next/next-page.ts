@@ -33,8 +33,8 @@ import type { NextPageProps } from "./next-page-props.js";
  * parameters for this page.
  * @param {string} S A union of the strings that comprise the possible query
  * parameters for this page.
- * @see NextPageProps The type of the object passed as a parameter to this
- * function.
+ * @see {@link NextPageProps} The type of the object passed as a parameter to
+ * this function.
  */
 export type NextPage<
 	P extends string = string,

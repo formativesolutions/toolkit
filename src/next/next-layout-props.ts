@@ -32,8 +32,8 @@ import type { ReactNode } from "react";
  * parameters to pages using the layout in question. Note that only path
  * parameters earlier in the routing chain than the given layout will be
  * available for use.
- * @see NextLayout The type of the function that takes objects of this type as a
- * parameter.
+ * @see {@link NextLayout} The type of the function that takes objects of this
+ * type as a parameter.
  */
 export type NextLayoutProps<P extends string = string> = {
 	
