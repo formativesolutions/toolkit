@@ -28,10 +28,14 @@ import type { ReactNode } from "react";
  * The type of the single parameter of the default function exported from layout
  * files in NextJS's `app/` directory.
  *
+ * @param {string} P A union of the strings that comprise the possible path
+ * parameters to pages using the layout in question. Note that only path
+ * parameters earlier in the routing chain than the given layout will be
+ * available for use.
  * @see NextLayout The type of the function that takes objects of this type as a
  * parameter.
  */
-export type NextLayoutProps<T extends string = never> = {
+export type NextLayoutProps<P extends string = string> = {
 	
 	/**
 	 * Represents the content unique to a given page that is using this layout.
@@ -42,6 +46,6 @@ export type NextLayoutProps<T extends string = never> = {
 	 * Represents the path parameters that Next has extracted from the current
 	 * route.
 	 */
-	params: Record<T, string>;
+	params: Record<P, string>;
 	
 };

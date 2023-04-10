@@ -29,7 +29,14 @@ import { type NextPageProps } from "./next-page-props.js";
  * The type of the default exported function from page files in NextJS's `app/`
  * directory.
  * 
+ * @param {string} P A union of the strings that comprise the possible path
+ * parameters for this page.
+ * @param {string} S A union of the strings that comprise the possible query
+ * parameters for this page.
  * @see NextPageProps The type of the object passed as a parameter to this
  * function.
  */
-export type NextPage = (props: NextPageProps) => ReactNode | Promise<ReactNode>;
+export type NextPage<
+	P extends string = string,
+	S extends string = string,
+> = (props: NextPageProps<P, S>) => ReactNode | Promise<ReactNode>;
