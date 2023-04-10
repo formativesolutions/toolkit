@@ -22,8 +22,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { type ReactNode } from "react";
-import { type NextPageProps } from "./next-page-props.js";
+import type { ReactNode } from "react";
+import type { NextPageProps } from "./next-page-props.js";
 
 /**
  * The type of the default exported function from page files in NextJS's `app/`
