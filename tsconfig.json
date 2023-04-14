@@ -6,7 +6,7 @@
 		"module": "ES2022",
 		
 		// Uses Node-style module resolution.
-		"moduleResolution": "Node16",
+		"moduleResolution": "bundler",
 		
 		// Allows interoperability between CommonJS and ES export/imports.
 		"esModuleInterop": true,
