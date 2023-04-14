@@ -189,12 +189,6 @@ const BASE_SWC_CONFIG = {
 			dynamicImport: true,
 		},
 		target: "es2022",
-		// transform: {
-		// 	react: {
-		// 		runtime: "automatic",
-		// 		importSource: "@emotion/react",
-		// 	},
-		// },
 		keepClassNames: true,
 	},
 	module: {
