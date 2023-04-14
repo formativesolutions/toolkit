@@ -24,7 +24,6 @@ export function getBuildConfig(isProduction = true) {
 	
 	// The path to the directory containing *this* file.
 	const dirname = path.dirname(url.fileURLToPath(import.meta.url));
-	// const dirname = __dirname;
 	
 	const projectRoot = dirname;
 	const sourceDirectory = path.resolve(projectRoot, "src");
@@ -105,9 +104,6 @@ const BASE_WEBPACK_CONFIG = {
 		//     'importType: module' is recognized.
 		importType: "module",
 	})],
-	resolve: {
-		// enforceExtension: true,
-	},
 };
 
 /**
