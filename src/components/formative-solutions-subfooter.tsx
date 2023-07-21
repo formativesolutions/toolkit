@@ -22,6 +22,7 @@
  */
 
 import styles from "./formative-solutions-subfooter.module.scss";
+import * as React from "react";
 import type { ReactElement } from "react";
 
 const SITE_LINK: string = "https://formativesolutions.io/";

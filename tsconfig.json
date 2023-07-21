@@ -62,7 +62,7 @@
 		"strictFunctionTypes": true,
 		
 		// Preserve the format of JSX/TSX in outputted files.
-		"jsx": "react-jsx",
+		"jsx": "react",
 		
 		// Allow React's form of default imports.
 		"allowSyntheticDefaultImports": true

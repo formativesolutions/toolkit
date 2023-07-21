@@ -21,6 +21,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import * as React from "react";
 import type { ReactElement } from "react";
 
 export type ColumnDefinition<T> = {

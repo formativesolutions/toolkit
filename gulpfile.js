@@ -8,26 +8,18 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import gulp from "gulp";
 import { deleteAsync } from "del";
-import webpack from "webpack";
 import typescript from "gulp-typescript";
-import { getBuildConfig, getWebpackConfig } from "./build.config.js";
-
-const IS_PRODUCTION = true;
-const buildConfig = getBuildConfig(IS_PRODUCTION);
 
 function clean() {
 	
-	return deleteAsync([
-		buildConfig.typesOutputDirectory,
-		buildConfig.outputDirectory,
-	]);
+	return deleteAsync(["./dist"]);
 	
 }
 
 async function cleanPack(done) {
 
 	const packageJSONFilePath = path.resolve(
-		buildConfig.projectRoot,
+		"./",
 		"package.json",
 	);
 	
@@ -55,60 +47,35 @@ async function cleanPack(done) {
 	
 	packFileName += `-${packageVersion}.tgz`;
 	
-	return deleteAsync(path.resolve(buildConfig.projectRoot, packFileName));
+	return deleteAsync(path.resolve("./", packFileName));
 
 }
 
-function buildTypes() {
+function buildTypeScript(done) {
 	
-	const typescriptProject =
-		typescript.createProject(buildConfig.tsconfigFile, {
-			emitDeclarationOnly: true,
-		});
+	const project = typescript.createProject("./tsconfig.json");
 	
-	return typescriptProject.src()
-		.pipe(typescriptProject())
-		.dts
-		.pipe(gulp.dest(buildConfig.typesOutputDirectory));
+	const pipe = project.src().pipe(project());
 	
-}
-
-function copySass() {
+	pipe.js.pipe(gulp.dest("./dist"));
+	pipe.dts.pipe(gulp.dest("./dist/.d.ts"));
 	
-	return gulp.src(`${buildConfig.sassInputDirectory}/**/*`)
-		.pipe(gulp.dest(buildConfig.sassOutputDirectory));
+	done();
 	
 }
 
-function compile() {
-	
-	const webpackConfig = getWebpackConfig(IS_PRODUCTION);
-	
-	return new Promise((resolve, reject) => {
-		
-		webpack(webpackConfig, (err, stats) => {
-			
-			if (err) reject(err);
-			else if (stats.hasErrors()) {
-				
-				const errorMessage = stats.compilation.errors.join("\n");
-				
-				reject(new Error(errorMessage));
-				
-			} else resolve();
-			
-		});
-		
-	});
-	
+function buildSassModules() {
+
+	return gulp.src("./src/**/*.scss")
+		.pipe(gulp.dest("./dist"));
+
 }
 
 function build(done) {
 	
 	return gulp.parallel(
-		buildTypes,
-		copySass,
-		compile,
+		buildTypeScript,
+		buildSassModules,
 	)(done);
 	
 }
