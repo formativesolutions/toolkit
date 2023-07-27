@@ -31,4 +31,4 @@ See the [wiki](https://github.com/formativesolutions/toolkit/wiki) for full docu
 
 @formativesolutions/toolkit is made available under the GNU General Public License v3.
 
-Copyright (C) 2022 Trevor Sears
+Copyright (C) 2022 Formative Solutions
