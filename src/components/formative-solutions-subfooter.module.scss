@@ -5,7 +5,7 @@
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
  * building Formative websites.
- * Copyright (C) 2022 Formative Solutions
+ * Copyright (C) 2023 Formative Solutions
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
