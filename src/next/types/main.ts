@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 9:49 AM -- December 20th, 2022.
+ * 12:53 PM -- July 27th, 2023
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,15 +22,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type { NextPage } from "next";
-import type { GetLayoutFunction } from "./get-layout-function.js";
-
-/**
- * The form of a Next page which specifies its own custom layout.
- *
- * @deprecated In favor of the new {@link NextPage} type that applies to pages
- * found in the `/app` directory.
- */
-export type NextPageWithLayout = NextPage & {
-	getLayout?: GetLayoutFunction;
-};
+export * from "./get-layout-function";
+export * from "./next-app-props-with-layout";
+export * from "./next-generate-metadata";
+export * from "./next-generate-static-params";
+export * from "./next-layout";
+export * from "./next-layout-props";
+export * from "./next-page";
+export * from "./next-page-props";
+export * from "./next-page-with-layout";
+export * from "./next-static-params";

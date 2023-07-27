@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 5:31 PM -- January 8th, 2023
+ * 12:47 PM -- April 7th, 2023
  * Project: @formativesolutions/toolkit
  *
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,19 +22,27 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type { ReactNode } from "react";
-import type { NextLayoutProps } from "./next-layout-props.js";
+import type { Metadata, ResolvingMetadata } from "next";
+import type { NextPageProps } from "./next-page-props";
+
+// TypeScript for some reason believes Metadata to be (at least partially?)
+// equivalent to the 'any' type, so ESLint was seeing a 'redundant type' issue. 
+/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 
 /**
- * The type of the default exported function from layout files in NextJS's
- * `app/` directory.
- *
+ * The type of the NextJS 'generateMetadata' function responsible for
+ * dynamically generating a {@link Metadata} object for a given route (either
+ * from a `page` or `layout` file inside the `app/` directory of a Next app).
+ * 
  * @param {string} P A union of the strings that comprise the possible path
- * parameters to pages using the layout in question. Note that only path
- * parameters earlier in the routing chain than the given layout will be
- * available for use.
- * @see {@link NextLayoutProps} The type of the object passed as a parameter to
- * this function.
+ * parameters for the page or layout for which metadata is being generated.
+ * @param {string} S A union of the strings that comprise the possible query
+ * parameters for the page or layout for which metadata is being generated.
  */
-export type NextLayout<P extends string = string> =
-	(props: NextLayoutProps<P>) => ReactNode | Promise<ReactNode>;
+export type NextGenerateMetadata<
+	P extends string = string,
+	S extends string = string,
+> = (
+	props: NextPageProps<P, S>,
+	parent?: ResolvingMetadata,
+) => (Metadata | Promise<Metadata>);

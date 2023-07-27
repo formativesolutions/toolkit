@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 12:47 PM -- April 7th, 2023
+ * 1:13 PM -- April 7th, 2023
  * Project: @formativesolutions/toolkit
  *
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,27 +22,19 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type { Metadata, ResolvingMetadata } from "next";
-import type { NextPageProps } from "./next-page-props.js";
-
-// TypeScript for some reason believes Metadata to be (at least partially?)
-// equivalent to the 'any' type, so ESLint was seeing a 'redundant type' issue. 
-/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
+import type { NextStaticParams } from "./next-static-params";
 
 /**
- * The type of the NextJS 'generateMetadata' function responsible for
- * dynamically generating a {@link Metadata} object for a given route (either
- * from a `page` or `layout` file inside the `app/` directory of a Next app).
+ * The type of the NextJS 'generateStaticParams' function responsible for
+ * generating a static list of possible path parameters/path parameter
+ * combinations object for a given route (either from a `page` or `layout` file
+ * inside the `app/` directory of a Next app) that is used to inform Next's
+ * static page generation abilities.
  * 
  * @param {string} P A union of the strings that comprise the possible path
- * parameters for the page or layout for which metadata is being generated.
- * @param {string} S A union of the strings that comprise the possible query
- * parameters for the page or layout for which metadata is being generated.
+ * parameters for the route (page or layout) in question.
+ * @see {@link NextStaticParams} for more information regarding the type that is
+ * expected to be returned from this function.
  */
-export type NextGenerateMetadata<
-	P extends string = string,
-	S extends string = string,
-> = (
-	props: NextPageProps<P, S>,
-	parent?: ResolvingMetadata,
-) => (Metadata | Promise<Metadata>);
+export type NextGenerateStaticParams<P extends string = string> =
+	() => Promise<NextStaticParams<P>>;

@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 11:35 AM - January 27th, 2023.
+ * 5:31 PM -- January 8th, 2023
  * Project: @formativesolutions/toolkit
  *
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -23,20 +23,18 @@
  */
 
 import type { ReactNode } from "react";
-import type { NextPageProps } from "./next-page-props.js";
+import type { NextLayoutProps } from "./next-layout-props";
 
 /**
- * The type of the default exported function from page files in NextJS's `app/`
- * directory.
- * 
+ * The type of the default exported function from layout files in NextJS's
+ * `app/` directory.
+ *
  * @param {string} P A union of the strings that comprise the possible path
- * parameters for this page.
- * @param {string} S A union of the strings that comprise the possible query
- * parameters for this page.
- * @see {@link NextPageProps} The type of the object passed as a parameter to
+ * parameters to pages using the layout in question. Note that only path
+ * parameters earlier in the routing chain than the given layout will be
+ * available for use.
+ * @see {@link NextLayoutProps} The type of the object passed as a parameter to
  * this function.
  */
-export type NextPage<
-	P extends string = string,
-	S extends string = string,
-> = (props: NextPageProps<P, S>) => ReactNode | Promise<ReactNode>;
+export type NextLayout<P extends string = string> =
+	(props: NextLayoutProps<P>) => ReactNode | Promise<ReactNode>;

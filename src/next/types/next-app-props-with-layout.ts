@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 9:53 AM -- December 20th, 2022.
+ * 9:50 AM -- December 20th, 2022.
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,4 +22,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./types/main";
+import type { AppProps as NextAppProps } from "next/app.js";
+import type { NextPageWithLayout } from "./next-page-with-layout";
+
+/**
+ * The form of the Next app props that are passed (specialized, such that
+ * Next pages can specify their own custom layouts, if need-be).
+ * 
+ * @see {@link NextAppProps} The base type for this type.
+ * @deprecated In favor of apps using the new `/app` directory.
+ */
+export type NextAppPropsWithLayout = NextAppProps & {
+	Component: NextPageWithLayout;
+};
