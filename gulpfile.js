@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
  * 5:03 PM -- December 28th, 2022
- * Project: toolkit
+ * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
  * building Formative websites.
