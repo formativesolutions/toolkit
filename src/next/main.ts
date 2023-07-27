@@ -23,3 +23,4 @@
  */
 
 export * from "./types/main";
+export * from "./next-font-provider";
