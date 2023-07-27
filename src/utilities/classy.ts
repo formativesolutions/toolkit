@@ -36,7 +36,7 @@
  * are booleans or values that can be evaluated as booleans (representing
  * whether or not the class name should be included in the output string).
  */
-type ClassNameObject =
+export type ClassNameObject =
 	Record<string, boolean | (() => boolean) | any>;
 
 /**
