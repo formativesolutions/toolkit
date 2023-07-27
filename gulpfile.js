@@ -1,5 +1,6 @@
 /*
- * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
+ * Created by Trevor Sears <trevor@formativesolutions.io>
+ *     (https://formativesolutions.io/).
  * 5:03 PM -- December 28th, 2022
  * Project: @formativesolutions/toolkit
  * 
