@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@formativesolutions.io>
  *     (https://formativesolutions.io/).
- * 9:20 AM -- December 20th, 2022.
+ * 2:23 PM -- July 27th, 2023
  * Project: @formativesolutions/toolkit
  * 
  * @formativesolutions/toolkit - A toolkit of functions and functionality for
@@ -22,6 +22,4 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export * from "./components/main";
-export * from "./next/main";
-export * from "./utilities/main";
+export * from "./classy";
